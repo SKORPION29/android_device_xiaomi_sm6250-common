@@ -231,4 +231,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 -include vendor/xiaomi/sm6250-common/BoardConfigVendor.mk
 
 # MiuiCamera
+ifeq ($(SHIP_ANX), true)
 -include vendor/xiaomi/miuicamera/BoardConfigAnx.mk
+endif

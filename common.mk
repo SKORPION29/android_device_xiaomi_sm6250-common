@@ -14,7 +14,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/sm6250-common/sm6250-common-vend
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # MiuiCamera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
+ifeq ($(SHIP_ANX), true)
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
+endif
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
