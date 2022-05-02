@@ -11,6 +11,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+TARGET_USES_PREBUILT_CAMERA_SERVICE := true
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
@@ -49,6 +50,7 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Dex
 WITH_DEXPREOPT_DEBUG_INFO := false
@@ -232,7 +234,9 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # MiuiCamera
+ifeq ($(SHIP_ANX), true)
 -include vendor/xiaomi/miuicamera/BoardConfigAnx.mk
+endif
 
 # Inherit proprietary blobs
 -include vendor/xiaomi/sm6250-common/BoardConfigVendor.mk
