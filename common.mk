@@ -117,7 +117,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    libgui_vendor
+    libgui_vendor \
+    GCamGOPrebuilt
 
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
