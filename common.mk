@@ -81,6 +81,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.lcd.cabc_mode=1
 
+# Dialer
+PRODUCT_PACKAGES += \
+    Phone
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
