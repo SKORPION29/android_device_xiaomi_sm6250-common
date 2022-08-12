@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     qcom.fmradio \
     qcom.fmradio.xml
 
+# Google Photos
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/pixel_2016_exclusive.xml
+
 # AVB
 PRODUCT_PACKAGES += \
     q-gsi.avbpubkey \
